@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="TheAccount" placeholder="Enter the account">
+<input type="button" id="CheckAccount" value="Check" onclick="isAccountValid();">
+<script>
+    function isAccountValid() {
+        var acc = document.getElementById("TheAccount").value;
+        regexp = /^[_a-z0-9]{6,}$/;
+        if(regexp.test(acc)) {
+            alert("This Account is valid")
+        }else alert("This Account is invalid");
+    }
+    isAccountValid();
+</script>
+</body>
+</html>
